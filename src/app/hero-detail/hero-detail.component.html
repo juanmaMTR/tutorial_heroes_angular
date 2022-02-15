@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Detalles Heroes</title>
+    </head>
+    <body>
+        <div *ngIf="heroe">
+            <h2>{{heroe.name | uppercase}} Detalles</h2>
+            <div>
+                <span>id: </span>{{heroe.id}}
+            </div>
+            <div>
+                <label for="hero-name">Nombre Héroe: </label>
+                <input id="hero-name" [(ngModel)]="heroe.name" placeholder="nombre">
+            </div>
+        </div>
+    </body>
+</html>
