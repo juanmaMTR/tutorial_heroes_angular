@@ -17,9 +17,16 @@
                 <a routerLink="/detail/{{heroe.id}}">
                     <span class="badge">{{heroe.id}}</span> {{heroe.name}}
                 </a>
+                <button type="button" class="delete" title="eliminar heroe" (click)="eliminar(heroe)">x</button>
             </li>
             
         </ul>
-        <app-hero-detail [heroe]="seleccionarHeroe"></app-hero-detail>
+        <div>
+            <label for="nuevo-heroe">Nombre Heroe: </label>
+            <input id="new-hero" #heroName />
+            <button type="button" class="add-button" (click)="anadir(heroName.value)">Añadir Heroe</button>
+            
+        </div>
+        <!-- <app-hero-detail [heroe]="seleccionarHeroe"></app-hero-detail> -->
     </body>
 </html>
